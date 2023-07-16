@@ -1,6 +1,6 @@
 {
-  "label": "DevSecOps",
-  "position": 2,
+  "label": "DevOps",
+  "position": 1,
   "link": {
     "type": "generated-index"
   }

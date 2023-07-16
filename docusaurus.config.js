@@ -66,10 +66,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'DockerX',
+        title: '',
         logo: {
           alt: 'DockerX',
-          src: 'img/logo.svg',
+          src: 'img/docker-x-logo.png',
         },
         items: [
           {
@@ -102,18 +102,6 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-              {
                 label: "GitHub",
                 href: `https://github.com/${organizationName}/${projectName}`,
               },
@@ -127,8 +115,8 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: "DockerX",
+                href: `https://github.com/${organizationName}`,
               },
             ],
           },
