@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <hr>
+    <footer id="footer">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        {% assign categories_list = site.categories %}
+                        {% if categories_list.first[0] == null %}
+                        {% for category in categories_list %}
+                        <a type="button" class="btn btn-secondary mb-1"
+                            href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">
+                            {{ category | camelcase }} <span class="badge bg-white text-secondary">{{
+                                site.tags[category].size }}</span>
+                        </a>
+
+                        {% endfor %}
+                        {% else %}
+                        {% for category in categories_list %}
+                        <a type="button" class="btn btn-secondary mb-1"
+                            href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"">
+                            {{ category[0] | camelcase }}
+                            <span class=" badge bg-white text-secondary">{{ category[1].size }}</span>
+                        </a>
+                        {% endfor %}
+                        {% endif %}
+                        {% assign categories_list = nil %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center">
+            <div class="col-md-12 col-sm-12">
+                <small>
+                    <p>&copy; {{ site.time | date: "%Y" }} <strong><span>DockerX</span></strong>. All rights reserved.
+
+                        |
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </small>
+            </div>
+        </div>
+    </footer>
+</div>
